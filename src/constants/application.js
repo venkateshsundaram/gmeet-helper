@@ -1,0 +1,2 @@
+export const GOOGLE_CALENDAR_URI = "https://www.googleapis.com/calendar/v3/calendars/primary/events?conferenceDataVersion=1";
+export const REVOKE_TOKEN_URI = "https://accounts.google.com/o/oauth2/revoke?token="

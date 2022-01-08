@@ -1,0 +1,57 @@
+.App {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.popup-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.popup-body, .popup-header {
+  padding: 1rem;
+}
+
+.popup-header {
+  padding-top: 2rem;
+}
+
+.popup-body {
+  overflow-y: auto;
+  margin-right: -1rem;
+  padding-right: 2rem;
+}
+
+.popup-header .row {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.popup-header h1 {
+  font-size: 1rem;
+}
+
+.button-primary-link {
+  background-color: transparent;
+  color: #e76450;
+  outline: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+.footer {
+  padding-left: 10px;
+  color: #444444;
+}

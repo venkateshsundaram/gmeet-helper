@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "gmeet-helper",
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-34.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.bundle.js"
+      ],
+      "css": [
+        "content.styles.css"
+      ]
+    }
+  ],
+  "devtools_page": "devtools.html",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.styles.css",
+        "icon-128.png",
+        "icon-34.png"
+      ],
+      "matches": []
+    }
+  ],
+  "commands": {
+    "create-meeting": {
+      "suggested_key": {
+        "default": "Alt+N"
+      },
+      "description": "Create a new meeting"
+    },
+    "copy-link": {
+      "suggested_key": {
+        "default": "Alt+C"
+      },
+      "description": "Copy the current link to clipboard"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+G"
+      }
+    }
+  },
+  "oauth2": {
+    "client_id": "598161007732-j9ekm1tql23jfctm3l3ok5d3605egqdh.apps.googleusercontent.com",
+    "scopes": [
+      "profile email",
+      "https://www.googleapis.com/auth/contacts",
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ]
+  },
+  "permissions": [
+    "identity",
+    "identity.email",
+    "storage"
+  ]
+}
